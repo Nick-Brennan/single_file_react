@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Single File React</title>
+</head>
+<body>
+	<div id="react-app"></div>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/react/15.1.0/react.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/react/15.1.0/react-dom.min.js"></script>
+	<script type="text/javascript">
+		var rootElement =
+			React.createElement('div', {},
+				React.createElement('h1', {}, "Contacts"),
+				React.createElement('ul', {},
+					React.createElement('li', {},
+						React.createElement('h2', {}, "Nick Brennan"),
+						React.createElement('a', {href: 'mailto:nick.brennan.dev@gmail.com'}, 'nick.brennan.dev@gmail.com')
+					),	
+					React.createElement('li', {},
+						React.createElement('h2', {}, "Herozzus Sterfenson"),
+						React.createElement('a', {href: 'mailto:herro@zus.com'}, 'herro@zus.com')
+					)	
+				)
+			)	
+
+		ReactDOM.render(rootElement, document.getElementById('react-app'));
+	</script>
+</body>
+</html>
